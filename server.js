@@ -8,13 +8,21 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB connection (Atlas URI from env variables in Vercel)
+// mongoose
+//   .connect("mongodb+srv://saurabhsaran474_db_user:root@nodetask1.9bow8js.mongodb.net/test” , {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => console.log("MongoDB connected"))
+//   .catch((err) => console.log(err));
 mongoose
-  .connect(process.env.MONGO_URI, {
+  .connect("mongodb+srv://saurabhsaran474_db_user:root@nodetask1.9bow8js.mongodb.net/test", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
+
 
 // ✅ User Schema
 const userSchema = new mongoose.Schema({
