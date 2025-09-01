@@ -96,7 +96,7 @@
     };
 
     $.ajax({
-      url: "http://localhost:5000/api/users",
+      url: "https://nodetask-vercel.vercel.app/api/users",
       method: "POST",
       data: JSON.stringify(formData),
       contentType: "application/json",
@@ -112,7 +112,7 @@
 
   $("#showUsers").click(function() {
     $.ajax({
-      url: "http://localhost:5000/api/users",
+      url: "https://nodetask-vercel.vercel.app/api/users",
       method: "GET",
       success: function(users) {
         let html = "<table class='table table-bordered'><thead><tr><th>Name</th><th>Email</th><th>Mobile</th><th>City</th></tr></thead><tbody>";
